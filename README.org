@@ -1,0 +1,21 @@
+* Project Euler, in gforth
+(Some of them, at least)
+Spoilers ahead (all solved problems are in the 100 first).
+
+** Running
+- Step zero: install gforth
+- Step one: run =gforth projecteuler.fth=
+  To run a specific solution, run the function (e.g. =PE1 .=). All functions leave the answer on the stack
+#+begin_src bash
+└ ⍥ gforth projecteuler.fth
+Gforth 0.7.9_20230518
+Authors: Anton Ertl, Bernd Paysan, Jens Wilke et al., for more type `authors'
+Copyright © 2023 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
+Gforth comes with ABSOLUTELY NO WARRANTY; for details type `license'
+Type `help' for basic help
+PE1 . 233168  ok
+PE2 . 4613732  ok
+PE5 . 232792560  ok
+PE6 . 25164150  ok
+#+end_src

@@ -1,15 +1,5 @@
-( UTILS )
+needs utils.fth
 
-: gcd
-  begin
-    2dup mod rot drop
-    dup 0<> while
-  repeat drop ;
-      
-
-: lcm 2dup * -rot gcd / ;
-
-( Solutions )
 : PE1 ( -- S )
   \ sum_{i=0}^1000 {i if 3|x or 5|x}
   \ Stack: acc i
@@ -55,13 +45,13 @@
   0 m 1 do i dup * + loop \ sum of squares
   - ;
   
-: PE9
-  \ only a*b*c t.q. (a,b,c) is pyth triplet and a+b+c=100
-  \ Stack: a b (c is computed)
-  1 2
-  begin
-    begin
-
-  while
-  repeat
-  ;
+\ : PE9
+\   \ only a*b*c t.q. (a,b,c) is pyth triplet and a+b+c=100
+\   \ Stack: a b (c is computed)
+\   1 2
+\   begin
+\     begin
+\ 
+\   while
+\   repeat
+\   ;
