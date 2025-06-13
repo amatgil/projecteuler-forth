@@ -12,3 +12,5 @@
 : 3dup { a b c } a b c a b c ;
 
 : isqrt ( truncating sqrt ) s>f fsqrt f>s ;
+
+: fact 1 swap 1+ 1 do i * loop ;
