@@ -1,6 +1,7 @@
 * Project Euler, in gforth
-(Some of them, at least)
-Spoilers ahead (all solved problems are in the 100 first).
+Some of them, at least
+
+Spoilers ahead, though all solved problems are in the 100 first (and it's not the hardest of them in particular. Keep in mind, forth is essentially readable assembly!).
 
 ** Running
 - Step zero: install gforth
@@ -19,3 +20,6 @@ PE2 . 4613732  ok
 PE5 . 232792560  ok
 PE6 . 25164150  ok
 #+end_src
+
+** Next steps
+I plan to make my own forth, of course, using gforth's syntax. These problems will be a good way to test that the implementation is correct
