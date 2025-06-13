@@ -59,4 +59,20 @@ needs utils.fth
   loop
 ;
 
+: PE14 
+  \ Stack: maxlen maxval
+  0 1
+  1000000 1+ 1 do 
+    0 i  \ Stack: len curr
+    begin
+      dup 2 mod 0= if 2 / else 3 * 1 + then
+      swap 1+ swap
+      dup 1 <> while
+    repeat
+    { oL oV nL nV } oL nL < if nL i else oL oV then
+  loop
+  swap drop
+;
+  
+
 
