@@ -8,3 +8,7 @@
       
 
 : lcm 2dup * -rot gcd / ;
+
+: 3dup { a b c } a b c a b c ;
+
+: isqrt ( truncating sqrt ) s>f fsqrt f>s ;

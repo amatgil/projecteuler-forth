@@ -45,13 +45,19 @@ needs utils.fth
   0 m 1 do i dup * + loop \ sum of squares
   - ;
   
-\ : PE9
-\   \ only a*b*c t.q. (a,b,c) is pyth triplet and a+b+c=100
-\   \ Stack: a b (c is computed)
-\   1 2
-\   begin
-\     begin
-\ 
-\   while
-\   repeat
-\   ;
+: PE9
+  \ only a*b*c st (a,b,c) a*a+b*b=c*c and a+b+c=100
+  \ Stack: a b (c is computed)
+  1000 { n }
+  n 1 do
+    n 1 do
+      i i * j j * +
+      s>f fsqrt fdup 1e0 fmod f0= if f>s
+                                  else fdrop n n * negate \ garbage value
+                                  then
+      i j + + n = if
+        i i * j j * + isqrt i j * *  unloop unloop exit
+      then
+    loop
+  loop
+;
